@@ -75,7 +75,7 @@ async function loadData() {
       const htmlPortfolio = `
         <div class="col-lg-4 col-md-6 portfolio-item filter-${projectConfig.category.toLowerCase().replace(' ', '_')}">
           <a href="project.html" onclick="saveIdProject(${id.toString()})" style="position: relative">
-            <div class="portfolio-img"><img src="${img_url}" class="img-fluid" alt=""></div>
+            <div class="portfolio-img"><img src="./${img_url}" class="img-fluid" alt=""></div>
             <div class="overlay">
               <h4 class="overlay-text">${projectConfig.name}</h4>
             </div>

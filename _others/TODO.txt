@@ -1,8 +1,5 @@
 icone servizi ??
 
-hover da mobile
-click dropdown mobile
-
 jquey project
 scroll to contact
 

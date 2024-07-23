@@ -165,5 +165,9 @@ function initDropDown() {
       $(this).removeClass('show');
       $(this).find('.dropdown-menu').removeClass('show');
     });
+
+    if(document.body.clientWidth < 991){
+      $('#dropdownMenuLink').removeAttr('href')
+    }
   });
 }

@@ -99,6 +99,7 @@ function backToTop() {
 function mobileChanges() {
   on('click', '.mobile-nav-toggle', function (e) {
     select('#navbar').classList.toggle('navbar-mobile')
+    select('#list-dropdown').classList.remove('dropdown-active')
     this.classList.toggle('bi-list')
     this.classList.toggle('bi-x')
   })

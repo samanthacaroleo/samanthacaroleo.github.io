@@ -42,10 +42,10 @@ async function getGeneric() {
   sessionStorage.setItem(`generic`, JSON.stringify(generic));
 
   let containerCategory = document.querySelector('#portfolio-flters');
-  containerCategory.innerHTML =  `<li onclick="selectetdCategory('all')" class="filter-active filter">All</li>`;
+  containerCategory.innerHTML =  `<li onclick="selectetdCategory('all')" class="filter-active filter"><span>All</span></li>`;
   if(containerCategory){
     generic.category.forEach(item => {
-      const htmlCategory = `<li class="filter" onclick="selectetdCategory('${item.toLowerCase().replace(' ', '_')}')">${item}</li>`
+      const htmlCategory = `<li class="filter" onclick="selectetdCategory('${item.toLowerCase().replace(' ', '_')}')"><span>${item}</span></li>`
       containerCategory.innerHTML += htmlCategory;
     })
   }
@@ -97,7 +97,7 @@ async function loadData() {
 function selectetdCategory(category){
   const filter = document.getElementsByClassName('filter');
   for(let x of filter){
-    x.innerHTML.toLowerCase().replace(' ', '_') == category ? x.classList.add("filter-active") : x.classList.remove("filter-active");
+    x.innerHTML.toLowerCase().replace(' ', '_') == `<span>${category}</span>` ? x.classList.add("filter-active") : x.classList.remove("filter-active");
   }
 
   const all = document.getElementsByClassName('portfolio-item');

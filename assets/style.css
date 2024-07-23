@@ -856,9 +856,11 @@ section {
 }
 
 .portfolio #portfolio-flters li {
+  margin-left: 3px;
+}
+
+.portfolio #portfolio-flters li span{
   cursor: pointer;
-  display: inline-block;
-  margin: 0 10px 10px 10px;
   font-size: 15px;
   font-weight: 600;
   line-height: 1;
@@ -866,6 +868,9 @@ section {
   text-transform: uppercase;
   color: var(--color-primary-blue);
   transition: all 0.3s ease-in-out;
+  display: flex;
+  height: 100%;
+  align-items: center;
 }
 
 .portfolio #portfolio-flters li.filter-active {

@@ -54,10 +54,11 @@ a {
   color: var(--color-secondary);
   text-decoration: none;
 }
-
-a:hover {
-  color: var(--color-primary-blue);
-  text-decoration: none;
+@media (hover: hover) and (pointer: fine) {
+  a:hover {
+    color: var(--color-primary-blue);
+    text-decoration: none;
+  }
 }
 
 h1,
@@ -92,11 +93,12 @@ h6 {
   line-height: 0;
 }
 
-.back-to-top:hover {
-  background: var(--color-primary-blue);
-  color: var(--color-white);
+@media (hover: hover) and (pointer: fine) {
+  .back-to-top:hover {
+    background: var(--color-primary-blue);
+    color: var(--color-white);
+  }
 }
-
 .back-to-top.active {
   visibility: visible;
   opacity: 1;
@@ -170,19 +172,30 @@ h6 {
   margin-left: 5px;
 }
 
-.navbar a:hover,
 .navbar .active,
-.navbar .active:focus,
-.navbar li:hover>a {
+.navbar .active:focus{
   color: var(--color-secondary);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .navbar a:hover,
+  .navbar li:hover>a {
+    color: var(--color-secondary);
+  }
 }
 
 .dropdown .dropdown-menu > ul,
 .dropdown .dropdown-menu > ul > li,
-.dropdown .dropdown-menu > ul > li > a,
-.dropdown:hover .dropdown-menu {
+.dropdown .dropdown-menu > ul > li > a {
   display: block;
   visibility: visible;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .dropdown:hover .dropdown-menu {
+    display: block;
+    visibility: visible;
+  }
 }
 
 .dropdown .dropdown-menu > ul,
@@ -193,21 +206,30 @@ h6 {
   display: none;
 }
 
-.dropdown:hover .dropdown-menu .dropdown-item {
-  text-align: center;
+.dropdown-item.active, .dropdown-item:active {
   color: var(--color-primary-blue) !important;
-  border-radius: 3px;
+  text-decoration: none;
+  background-color: var(--color-white);
 }
 
-.dropdown:hover .dropdown-menu .dropdown-item:hover {
-  color: var(--color-primary-blue) !important;
+@media (hover: hover) and (pointer: fine) {
+  .dropdown:hover .dropdown-menu .dropdown-item {
+    text-align: center;
+    color: var(--color-primary-blue) !important;
+    border-radius: 3px;
+  }
+
+  .dropdown:hover .dropdown-menu .dropdown-item:hover {
+    color: var(--color-primary-blue) !important;
+  }
+
+  .dropdown:hover .dropdown-menu .dropdown-item:active,
+  .dropdown:hover .dropdown-menu .dropdown-item.active {
+    color: var(--color-secondary) !important;
+    background-color: var(--color-white) !important;
+  }
 }
 
-.dropdown:hover .dropdown-menu .dropdown-item:active,
-.dropdown:hover .dropdown-menu .dropdown-item.active {
-  color: var(--color-secondary) !important;
-  background-color: var(--color-white) !important;
-}
 
 /**
 * Mobile Navigation 
@@ -271,10 +293,15 @@ h6 {
   color: var(--color-primary-blue);
 }
 
-.navbar-mobile a:hover,
-.navbar-mobile .active,
-.navbar-mobile li:hover>a {
+.navbar-mobile .active{
   color: var(--color-secondary);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .navbar-mobile a:hover,
+  .navbar-mobile li:hover>a {
+    color: var(--color-secondary);
+  }
 }
 
 .navbar-mobile .getstarted,
@@ -306,11 +333,14 @@ h6 {
   font-size: 12px;
 }
 
-.navbar-mobile .dropdown ul a:hover,
-.navbar-mobile .dropdown ul .active:hover,
-.navbar-mobile .dropdown ul li:hover>a {
-  color: var(--color-secondary);
+@media (hover: hover) and (pointer: fine) {
+  .navbar-mobile .dropdown ul a:hover,
+  .navbar-mobile .dropdown ul .active:hover,
+  .navbar-mobile .dropdown ul li:hover>a {
+    color: var(--color-secondary);
+  }
 }
+
 
 .navbar-mobile .dropdown>.dropdown-active {
   display: block;
@@ -395,9 +425,12 @@ h6 {
   font-size: 48px;
 }
 
-#hero .btn-scroll:hover {
-  color: var(--color-primary-blue);
+@media (hover: hover) and (pointer: fine) {
+  #hero .btn-scroll:hover {
+    color: var(--color-primary-blue);
+  }
 }
+
 
 @media (min-width: 1024px) {
   #hero {
@@ -661,9 +694,12 @@ section {
   transition: ease-in-out 0.3s;
 }
 
-.about .content .count-box a:hover {
-  color: var(--color-gray);
+@media (hover: hover) and (pointer: fine) {
+  .about .content .count-box a:hover {
+    color: var(--color-gray);
+  }
 }
+
 
 .about .skills-content {
   margin-top: 30px;
@@ -777,19 +813,14 @@ section {
 
 .services .icon {
   margin: 0 auto 20px auto;
-  display: inline-block;
-  text-align: center;
-  border-radius: 50%;
-  width: 72px;
-  height: 72px;
-  background:var(--color-secondary);
+  width: 130px;
+  height: 130px;
 }
 
 .services .icon i {
   display: block;
-  background-size: cover;
   background-position:center;
-  background-size: 50px;
+  background-size: 120px;
   background-repeat: no-repeat;
 }
 
@@ -835,13 +866,19 @@ section {
   margin-top: 15px;
 }
 
-.services .icon-box:hover {
-  border-color:var(--color-primary-blue);
+@media (hover: hover) and (pointer: fine) {
+  .services .icon-box:hover {
+    border-color:var(--color-primary-blue);
+  }
 }
 
-.services .icon-box:hover .title a {
-  color:var(--color-secondary);
+
+@media (hover: hover) and (pointer: fine) {
+  .services .icon-box:hover .title a {
+    color:var(--color-secondary);
+  }
 }
+
 
 /*--------------------------------------------------------------
 # My Portfolio
@@ -856,9 +893,11 @@ section {
 }
 
 .portfolio #portfolio-flters li {
+  margin-left: 3px;
+}
+
+.portfolio #portfolio-flters li span{
   cursor: pointer;
-  display: inline-block;
-  margin: 0 10px 10px 10px;
   font-size: 15px;
   font-weight: 600;
   line-height: 1;
@@ -866,15 +905,21 @@ section {
   text-transform: uppercase;
   color: var(--color-primary-blue);
   transition: all 0.3s ease-in-out;
+  display: flex;
+  height: 100%;
+  align-items: center;
 }
 
 .portfolio #portfolio-flters li.filter-active {
   border: 2px solid var(--color-secondary);
 }
 
-.portfolio #portfolio-flters li:hover {
-  border: 2px solid var(--color-primary-blue);
+@media (hover: hover) and (pointer: fine) {
+  .portfolio #portfolio-flters li:hover {
+    border: 2px solid var(--color-primary-blue);
+  }
 }
+
 
 .portfolio .portfolio-item {
   margin-bottom: 30px;
@@ -897,8 +942,10 @@ section {
   transition: all 0.8s ease-in-out;
 }
 
-.portfolio .portfolio-item:hover .portfolio-img img {
-  transform: scale(1.2);
+@media (hover: hover) and (pointer: fine) {
+  .portfolio .portfolio-item:hover .portfolio-img img {
+    transform: scale(1.2);
+  }
 }
 
 .overlay {
@@ -914,9 +961,12 @@ section {
   background: var(--color-black-opacity);
 }
 
-.portfolio-item:hover .overlay {
-  opacity: 1;
+@media (hover: hover) and (pointer: fine) {
+  .portfolio-item:hover .overlay {
+    opacity: 1;
+  }
 }
+
 
 .overlay-text {
   color: var(--color-white);
@@ -981,10 +1031,12 @@ section {
   color: var(--color-white);
 }
 
-#contact .social-links a:hover {
-  background: var(--color-primary-blue);
-  color: var(--color-white);
-  text-decoration: none;
+@media (hover: hover) and (pointer: fine) {
+  #contact .social-links a:hover {
+    background: var(--color-primary-blue);
+    color: var(--color-white);
+    text-decoration: none;
+  }
 }
 
 .contact .php-email-form {
@@ -1023,9 +1075,12 @@ section {
   border-radius: 5px;
 }
 
-.contact .php-email-form button[type=submit]:hover {
-  background: var(--color-primary-blue);
+@media (hover: hover) and (pointer: fine) {
+  .contact .php-email-form button[type=submit]:hover {
+    background: var(--color-primary-blue);
+  }
 }
+
 
 @keyframes animate-loading {
   0% {
@@ -1089,10 +1144,12 @@ section {
   transition: 0.3s;
 }
 
-#footer .social-links a:hover {
-  background: var(--color-primary-blue);
-  color: var(--color-white);
-  text-decoration: none;
+@media (hover: hover) and (pointer: fine) {
+  #footer .social-links a:hover {
+    background: var(--color-primary-blue);
+    color: var(--color-white);
+    text-decoration: none;
+  }
 }
 
 #footer .copyright {
@@ -1117,12 +1174,12 @@ section {
   width: 100%;
   height: 100%;
   z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .loader {
-  position: absolute;
-  top: 50%;
-  left: 50%;
   width: 50px;
   padding: 8px;
   aspect-ratio: 1;

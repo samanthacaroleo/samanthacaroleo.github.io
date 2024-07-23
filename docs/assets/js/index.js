@@ -60,8 +60,8 @@ async function loadData() {
 
   while (continua && containerPortfolio && containerDropDown) {
     try {
-      const img_url = `assets/project/project_${id.toString()}/_prj${id.toString()}_portfolio.jpg`;
-      const config_url = `assets/project/project_${id.toString()}/_prj${id.toString()}_config.json`;
+      const img_url = `assets/project/project_${id.toString()}/prj${id.toString()}_portfolio.jpg`;
+      const config_url = `assets/project/project_${id.toString()}/prj${id.toString()}_config.json`;
 
       const res_img = await fetch(img_url);
       if (!res_img.ok) throw new Error('Immagine non trovata');
@@ -75,7 +75,7 @@ async function loadData() {
       const htmlPortfolio = `
         <div class="col-lg-4 col-md-6 portfolio-item filter-${projectConfig.category.toLowerCase().replace(' ', '_')}">
           <a href="project.html" onclick="saveIdProject(${id.toString()})" style="position: relative">
-            <div class="portfolio-img"><img src="/${img_url}" class="img-fluid" alt=""></div>
+            <div class="portfolio-img"><img src="${img_url}" class="img-fluid" alt=""></div>
             <div class="overlay">
               <h4 class="overlay-text">${projectConfig.name}</h4>
             </div>

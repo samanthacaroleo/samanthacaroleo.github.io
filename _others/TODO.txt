@@ -1,7 +1,6 @@
 icone servizi ??
 
 hover da mobile
-centrare loading
 click dropdown mobile
 
 jquey project

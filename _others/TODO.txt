@@ -9,3 +9,6 @@ cache a un nuovo progetto
 
 check accessibilita
 seo (alt ecc)
+    alt vuoti
+    https://github.com/orgs/community/discussions/42375
+    https://github.com/orgs/community/discussions/42375#discussioncomment-5296219

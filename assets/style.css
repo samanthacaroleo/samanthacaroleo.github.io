@@ -206,6 +206,12 @@ h6 {
   display: none;
 }
 
+.dropdown-item.active, .dropdown-item:active {
+  color: var(--color-primary-blue) !important;
+  text-decoration: none;
+  background-color: var(--color-white);
+}
+
 @media (hover: hover) and (pointer: fine) {
   .dropdown:hover .dropdown-menu .dropdown-item {
     text-align: center;
@@ -807,19 +813,14 @@ section {
 
 .services .icon {
   margin: 0 auto 20px auto;
-  display: inline-block;
-  text-align: center;
-  border-radius: 50%;
-  width: 72px;
-  height: 72px;
-  background:var(--color-secondary);
+  width: 130px;
+  height: 130px;
 }
 
 .services .icon i {
   display: block;
-  background-size: cover;
   background-position:center;
-  background-size: 50px;
+  background-size: 120px;
   background-repeat: no-repeat;
 }
 

@@ -1,5 +1,6 @@
 setlocal enabledelayedexpansion
 
+
 set "target_folder=..\assets\"
 cd ..\assets\
 
@@ -16,14 +17,13 @@ for /r %%f in (*) do (
     set "filename=%%~nf"
     set "extension=%%~xf"
 
-    set "newPath= "
+    set newPath=%*
     set "oldPath=___%old_id%"
-    call set newFilename=%%filename:%oldPath%=%newPath%%%
+    set "newfilename=!filename:%oldPath% =!"
 
-
-   ren "!fullpath!" "!filename!___%new_id%!extension!"
+    ren "!fullpath!" "!newfilename!___%new_id%"
+    pause
 )
 
 endlocal
 
-pause

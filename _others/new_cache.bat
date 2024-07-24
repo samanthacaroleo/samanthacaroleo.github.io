@@ -7,7 +7,7 @@ set /p old_id=<incId.txt
 set /a new_id=%old_id%+1
 echo %new_id% > incId.txt
 
-set "target_folder=..\_others\"
+set "target_folder=..\_others\test\"
 cd "%target_folder%"
 
 for /r %%f in (*) do (

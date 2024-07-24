@@ -1,32 +1,27 @@
+@echo off
 setlocal enabledelayedexpansion
 
-set "target_folder=..\assets\project"
-cd /d "%target_folder%"
+cd ..\assets\
+set /p old_id=<incId.txt
+set /a new_id=%old_id%+1
+> incId.txt (
+    echo|set /p=!new_id!
+)
 
-set /p old_id=<incremental_id.txt
-set /a new_id=%numero%+1
-echo %new_id% > incremental_id.txt
+cd project\
+set "to_remove=___%old_id%"
+set "to_add=___%new_id%"
 
-%@Try%
-    for /r %%f in (*) do (
-        set "fullpath=%%f"
-        set "dirname=%%~dpf"
-        set "filename=%%~nf"
-        set "extension=%%~xf"
+for /r %%f in (*) do (
+    set "filename=%%~nxf"
+    set "extension=%%~xf"
 
+    set "new_filename=!filename:%to_remove%.txt=!"
+    set "new_filename=!new_filename!!to_add!!extension!"
 
-
-        for /f "tokens=1* delims=___" %%a in ("%filename%") do (
-            set "result=%%a"
-        )
-
-        ren "!fullpath!" "!result!___!new_id!!extension!"
+    if not "!filename!"=="!new_filename!" (
+        ren "%%f" "!new_filename!"
     )
-%@EndTry%
-
-:@Catch
-  echo errore
-  pause
-:@EndCatch
+)
 
 endlocal

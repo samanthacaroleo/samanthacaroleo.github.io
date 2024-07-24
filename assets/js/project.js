@@ -1,14 +1,17 @@
 (async function () {
-  await loadImgProject();
-  await loadDropDown();
 
   const projectId = sessionStorage.getItem('projectId');
-  const projectName = JSON.parse(sessionStorage.getItem(`config_${projectId}`)).name
-
-  changeText('project-name-title', projectName);
-  changeText('project-name-breadcrumb', projectName);
-
-  removeLoading();
+  
+  if(projectId){
+    const projectName = JSON.parse(sessionStorage.getItem(`config_${projectId}`)).name
+    await loadImgProject();
+    await loadDropDown();
+    changeText('project-name-title', projectName); 
+    removeLoading();
+  } 
+  else {
+    window.location.href = "/";
+  }
 })()
 
 async function loadImgProject() {

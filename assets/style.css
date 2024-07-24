@@ -23,7 +23,6 @@
   --color-original-gray: rgba(233, 239, 249);
   --color-body-background: rgba(233, 239, 249, 0.5);
   --color-inner-page-background: rgba(233, 239, 249, 0.3);
-  --color-breadcrumb-background: rgba(233, 239, 249, 0.5);
 
   --color-primary-blue: rgb(25, 35, 62);
   --color-secondary: rgb(195, 191, 170);
@@ -508,9 +507,6 @@ span.typed-cursor {
 /*--------------------------------------------------------------
 # Sections General
 --------------------------------------------------------------*/
-section {
-  padding: 60px 0;
-}
 
 .section-bg {
   background-color: var(--color-white);
@@ -573,10 +569,16 @@ section {
 # Breadcrumbs
 --------------------------------------------------------------*/
 .breadcrumbs {
-  padding: 20px 0;
-  background-color: var(--color-breadcrumb-background);
+  padding-bottom: 20px;
+  padding-top: 60px;
   min-height: 40px;
   margin-top: 78px;
+}
+
+.breadcrumbs .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @media (max-width: 992px) {
@@ -586,8 +588,8 @@ section {
 }
 
 .breadcrumbs h2 {
-  font-size: 24px;
-  font-weight: 300;
+  font-size: 80px;
+  font-weight: 100;
   margin: 0;
 }
 
@@ -1234,4 +1236,8 @@ h2,
   white-space: pre-line; /* CSS 3 (and 2.1 as well, actually) */
   word-wrap: break-word; /* IE */
   word-break: break-all;
+}
+
+.no-scroll {
+  overflow-y: hidden;
 }

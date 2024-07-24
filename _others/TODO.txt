@@ -3,12 +3,9 @@ scroll to contact
 immagini services
 
 cache a un nuovo progetto
-    script salva in file id random
-    concatenare a tutti i file dentro la cartella project
     modificare script acquisizione img
     copia il contenuto in /docs
     file script e altri id ??
-    copiare file in docs
 
 check accessibilita
 seo (alt ecc)

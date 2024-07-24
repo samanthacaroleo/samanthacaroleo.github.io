@@ -14,10 +14,8 @@ set "to_add=___%new_id%"
 
 for /r %%f in (*) do (
     set "filename=%%~nxf"
-    set "extension=%%~xf"
 
-    set "new_filename=!filename:%to_remove%.txt=!"
-    set "new_filename=!new_filename!!to_add!!extension!"
+    set "new_filename=!filename:%to_remove%=%to_add%!"
 
     if not "!filename!"=="!new_filename!" (
         ren "%%f" "!new_filename!"

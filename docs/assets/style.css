@@ -111,6 +111,7 @@ h6 {
   z-index: 997;
   transition: all 0.5s;
   height: 80px;
+  width: 100vw;
 }
 
 #header.header-transparent {
@@ -350,7 +351,17 @@ h6 {
 # Hero Section
 --------------------------------------------------------------*/
 
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 400px) {
+  #logo {
+    background: var(--url-header-logo-mobile) top right;
+    background-repeat: no-repeat;
+    background-size: 200px;
+    width: 200px;
+    height: 140px;
+  }
+}
+
+@media screen and (min-width: 400px) and (max-width: 991px){
   #logo {
     background: var(--url-header-logo-mobile) top right;
     background-repeat: no-repeat;
@@ -522,6 +533,12 @@ section {
   z-index: 2;
 }
 
+@media screen and (max-width: 400px) {
+  .section-title span {
+    display: none;
+  }
+}
+
 .section-title span {
   position: absolute;
   top: 30px;
@@ -637,6 +654,7 @@ section {
   margin-bottom: 20px;
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .about .content ul strong {
@@ -890,6 +908,7 @@ section {
 .portfolio #portfolio-flters {
   list-style: none;
   margin-bottom: 20px;
+  flex-wrap: wrap;
 }
 
 .portfolio #portfolio-flters li {
@@ -1199,4 +1218,20 @@ section {
   to {
     transform: rotate(1turn);
   }
+}
+
+
+/*--------------------------------------------------------------
+# Utility
+--------------------------------------------------------------*/
+h2,
+.string-wrap {
+  white-space: -moz-pre-wrap; /* Mozilla */
+  white-space: -hp-pre-wrap; /* HP printers */
+  white-space: -o-pre-wrap; /* Opera 7 */
+  white-space: -pre-wrap; /* Opera 4-6 */
+  white-space: pre-wrap; /* CSS 2.1 */
+  white-space: pre-line; /* CSS 3 (and 2.1 as well, actually) */
+  word-wrap: break-word; /* IE */
+  word-break: break-all;
 }

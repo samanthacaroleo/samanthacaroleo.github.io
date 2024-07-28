@@ -151,6 +151,7 @@ function scroolOfset() {
 
 function removeLoading() {
   document.getElementById('loader').remove();
+  select('.no-scroll').classList.remove('no-scroll');
 }
 
 function saveIdProject(id) {

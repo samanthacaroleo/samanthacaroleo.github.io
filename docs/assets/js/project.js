@@ -1,25 +1,29 @@
 (async function () {
-  await loadImgProject();
-  await loadDropDown();
 
   const projectId = sessionStorage.getItem('projectId');
-  const projectName = JSON.parse(sessionStorage.getItem(`config_${projectId}`)).name
-
-  changeText('project-name-title', projectName);
-  changeText('project-name-breadcrumb', projectName);
-
-  removeLoading();
+  
+  if(projectId){
+    const projectName = JSON.parse(sessionStorage.getItem(`config_${projectId}`)).name
+    await loadImgProject();
+    await loadDropDown();
+    changeText('project-name-title', projectName); 
+    removeLoading();
+  } 
+  else {
+    window.location.href = "/";
+  }
 })()
 
 async function loadImgProject() {
     let id = 0;
     let continua = true;
+    const incId = sessionStorage.getItem('incId');
     const container = document.querySelector('#project-container');
     const projectId = sessionStorage.getItem('projectId');
   
     while (continua && container) {
       try {
-        const url = `assets/project/project_${projectId.toString()}/prj${projectId.toString()}_img${id.toString()}.jpg`;
+        const url = `assets/project/project_${projectId.toString()}/prj${projectId.toString()}_img${id.toString()}___${incId.toString()}.jpg`;
         const response = await fetch(url);
         if (!response.ok) throw new Error('Immagine non trovata');
         const html = `

@@ -18,6 +18,9 @@ function skillAnimation() {
   "use strict";
   skillAnimation();
   animateHeroSection();
+
+  sessionStorage.clear();
+  await getIncId();
   await getGeneric();
   await loadData();
 })()
@@ -34,8 +37,18 @@ function animateHeroSection() {
   }
 }
 
+async function getIncId() {
+  const url = `assets/incId.txt`;
+  const res = await fetch(url);
+  if (!res.ok) throw new Error('404');
+  const incId = await res.json();
+  sessionStorage.setItem(`incId`, JSON.stringify(incId));
+}
+
+
 async function getGeneric() {
-  const url = `assets/project/generic.json`;
+  const incId = sessionStorage.getItem('incId');
+  const url = `assets/project/generic___${incId.toString()}.json`;
   const res = await fetch(url);
   if (!res.ok) throw new Error('404');
   const generic = await res.json();
@@ -52,16 +65,16 @@ async function getGeneric() {
 }
 
 async function loadData() {
-  sessionStorage.clear();
   let id = 0;
   let continua = true;
+  const incId = sessionStorage.getItem('incId');
   const containerPortfolio = document.querySelector('#portfolio-container');
   const containerDropDown = document.querySelector('#list-dropdown');
 
   while (continua && containerPortfolio && containerDropDown) {
     try {
-      const img_url = `assets/project/project_${id.toString()}/prj${id.toString()}_portfolio.jpg`;
-      const config_url = `assets/project/project_${id.toString()}/prj${id.toString()}_config.json`;
+      const img_url = `assets/project/project_${id.toString()}/prj${id.toString()}_portfolio___${incId.toString()}.jpg`;
+      const config_url = `assets/project/project_${id.toString()}/prj${id.toString()}_config___${incId.toString()}.json`;
 
       const res_img = await fetch(img_url);
       if (!res_img.ok) throw new Error('Immagine non trovata');

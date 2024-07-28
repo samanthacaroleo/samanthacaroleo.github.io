@@ -1087,6 +1087,7 @@ span.typed-cursor {
 }
 
 .contact .php-email-form button[type=submit] {
+  font-size: larger;
   margin-top: 20px;
   background: var(--color-secondary);
   border: 0;

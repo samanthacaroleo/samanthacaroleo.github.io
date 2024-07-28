@@ -34,5 +34,10 @@ copy "index.html" "docs\index.html"
 copy "project.html" "docs\project.html"
 xcopy "assets" "docs/assets" /E /H /C /I
 
+CMD /C git fetch
+CMD /C git pull
+CMD /C git add -A
+CMD /C git commit -a -m "S-deploy"
+CMD /C git push
 
 endlocal

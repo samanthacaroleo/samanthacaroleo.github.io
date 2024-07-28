@@ -1,11 +1,5 @@
 scroll to contact
-
 immagini services
-
-cache a un nuovo progetto
-    modificare script acquisizione img
-    copia il contenuto in /docs
-    file script e altri id ??
 
 check accessibilita
 seo (alt ecc)

@@ -22,4 +22,17 @@ for /r %%f in (*) do (
     )
 )
 
+
+cd ../..
+
+set to_delete="docs"
+del /Q %to_delete%\*
+for /D %%p in (%to_delete%\*) do rmdir /S /Q "%%p"
+
+copy "404.html" "docs\404.html"
+copy "index.html" "docs\index.html"
+copy "project.html" "docs\project.html"
+xcopy "assets" "docs/assets" /E /H /C /I
+
+
 endlocal

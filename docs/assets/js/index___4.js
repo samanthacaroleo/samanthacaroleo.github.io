@@ -73,11 +73,8 @@ async function loadData() {
 
   while (continua && containerPortfolio && containerDropDown) {
     try {
-      const img_url = `assets/project/project_${id.toString()}/prj${id.toString()}_portfolio___${incId.toString()}.jpg`;
       const config_url = `assets/project/project_${id.toString()}/prj${id.toString()}_config___${incId.toString()}.json`;
-
-      const res_img = await fetch(img_url);
-      if (!res_img.ok) throw new Error('Immagine non trovata');
+      const img_url = `assets/project/project_${id.toString()}/prj${id.toString()}_portfolio___${incId.toString()}.jpg`;
 
       const res_config = await fetch(config_url);
       if (!res_config.ok) throw new Error('config non trovata');

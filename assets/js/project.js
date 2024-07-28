@@ -17,12 +17,13 @@
 async function loadImgProject() {
     let id = 0;
     let continua = true;
+    const incId = sessionStorage.getItem('incId');
     const container = document.querySelector('#project-container');
     const projectId = sessionStorage.getItem('projectId');
   
     while (continua && container) {
       try {
-        const url = `assets/project/project_${projectId.toString()}/prj${projectId.toString()}_img${id.toString()}.jpg`;
+        const url = `assets/project/project_${projectId.toString()}/prj${projectId.toString()}_img${id.toString()}___${incId.toString()}.jpg`;
         const response = await fetch(url);
         if (!response.ok) throw new Error('Immagine non trovata');
         const html = `

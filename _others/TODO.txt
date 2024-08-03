@@ -10,3 +10,5 @@ seo (alt ecc)
     https://github.com/orgs/community/discussions/42375#discussioncomment-5296219
 
 https://www.dostips.com/DtTipsStringManipulation.php#Snippets.Remove
+
+https://softwareupdate.vmware.com/cds/vmw-desktop/

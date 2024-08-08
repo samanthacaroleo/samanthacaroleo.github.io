@@ -354,8 +354,8 @@ h6 {
   #logo {
     background: var(--url-header-logo-mobile) top right;
     background-repeat: no-repeat;
-    background-size: 200px;
-    width: 200px;
+    background-size: 180px;
+    width: 180px;
     height: 140px;
   }
 }

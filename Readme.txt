@@ -2,5 +2,5 @@
 # Samantha Caroleo
 ### progetto Frontend
 ## Template BootstrapMade, Copyright Laura. All rights reserved
-## Icon:Boxicons, Font Awesome
+## Icon:Boxicons
 ## Form Submit Formspree

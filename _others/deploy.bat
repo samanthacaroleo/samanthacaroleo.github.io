@@ -31,9 +31,12 @@ for /r %%f in (*) do (
 
 cd ..\..
 cmd /c _others\jreplace "\bmain%to_remove%.js\b" "main%to_add%.js" /f index.html /o -
-cmd /c _others\jreplace "\bproject%to_remove%.js\b" "project%to_add%.js" /f project.html /o -
-cmd /c _others\jreplace "\bmain%to_remove%.js\b" "main%to_add%.js" /f project.html /o -
 cmd /c _others\jreplace "\bindex%to_remove%.js\b" "index%to_add%.js" /f index.html /o -
+cmd /c _others\jreplace "\style%to_remove%.css\b" "style%to_add%.css" /f index.html /o -
+
+cmd /c _others\jreplace "\bmain%to_remove%.js\b" "main%to_add%.js" /f project.html /o -
+cmd /c _others\jreplace "\bproject%to_remove%.js\b" "project%to_add%.js" /f project.html /o -
+cmd /c _others\jreplace "\style%to_remove%.css\b" "style%to_add%.css" /f project.html /o -
 
 cd assets\js
 for /r %%f in (*) do (

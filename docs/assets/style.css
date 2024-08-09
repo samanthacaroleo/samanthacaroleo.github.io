@@ -1186,14 +1186,21 @@ span.typed-cursor {
   }
 }
 
-#footer .copyright {
-  margin: 0 0 5px 0;
-  color: var(--color-secondary);
+#footer .copyright a:hover,
+#footer .credits a:hover {
+  color: var(--color-primary-blue);
 }
 
-#footer .credits {
+#footer .copyright,
+#footer .copyright a {
+  margin: 0 0 5px 0;
+  color: var(--color-gray);
+}
+
+#footer .credits,
+#footer .credits a {
   font-size: 13px;
-  color: var(--color-secondary);
+  color: var(--color-gray);
 }
 
 /*--------------------------------------------------------------

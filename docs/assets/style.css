@@ -350,7 +350,7 @@ h6 {
 # Hero Section
 --------------------------------------------------------------*/
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 350px) {
   #logo {
     background: var(--url-header-logo-mobile) top right;
     background-repeat: no-repeat;
@@ -360,7 +360,7 @@ h6 {
   }
 }
 
-@media screen and (min-width: 400px) and (max-width: 991px){
+@media screen and (min-width: 350px) and (max-width: 991px){
   #logo {
     background: var(--url-header-logo-mobile) top right;
     background-repeat: no-repeat;

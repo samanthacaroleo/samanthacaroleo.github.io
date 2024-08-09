@@ -32,9 +32,9 @@
   
   --color-white: rgb(255, 255, 255);
   --color-gray: rgb(124, 132, 139);
-  --color-black: rgb(0, 0, 0);
-  --color-black-opacity: rgba(0, 0, 0, 0.75);
-  --color-black-opacity-ligth: rgba(0, 0, 0, 0.1);
+
+  --color-blue-opacity: rgba(25, 35, 62, 0.75);
+  --color-blue-opacity-ligth: rgba(25, 35, 62, 0.1);
 }
 
 .inner-page{
@@ -318,7 +318,7 @@ h6 {
   opacity: 1;
   visibility: visible;
   background: var(--color-white);
-  box-shadow: 0px 0px 30px var(--color-black-opacity);
+  box-shadow: 0px 0px 30px var(--color-blue-opacity);
 }
 
 .navbar-mobile .dropdown ul li {
@@ -354,8 +354,8 @@ h6 {
   #logo {
     background: var(--url-header-logo-mobile) top right;
     background-repeat: no-repeat;
-    background-size: 200px;
-    width: 200px;
+    background-size: 180px;
+    width: 180px;
     height: 140px;
   }
 }
@@ -581,11 +581,6 @@ span.typed-cursor {
   align-items: center;
 }
 
-@media (max-width: 992px) {
-  .breadcrumbs {
-    margin-top: 60px;
-  }
-}
 
 .breadcrumbs h2 {
   font-size: 80px;
@@ -594,8 +589,25 @@ span.typed-cursor {
 }
 
 @media (max-width: 992px) {
+  .breadcrumbs {
+    margin-top: 60px;
+  }
+
   .breadcrumbs h2 {
     margin: 10px 0 0 0;
+    font-size: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .breadcrumbs h2 {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 260px) {
+  .breadcrumbs h2 {
+    font-size: 20px;
   }
 }
 
@@ -826,7 +838,7 @@ span.typed-cursor {
   padding: 30px;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 10px 29px 0 var(--color-black-opacity-ligth);
+  box-shadow: 0 10px 29px 0 var(--color-blue-opacity-ligth);
   transition: all 0.3s ease-in-out;
   text-align: center;
 }
@@ -979,7 +991,7 @@ span.typed-cursor {
   width: 100%;
   opacity: 0;
   transition: .5s ease;
-  background: var(--color-black-opacity);
+  background: var(--color-blue-opacity);
 }
 
 @media (hover: hover) and (pointer: fine) {
@@ -1009,7 +1021,7 @@ span.typed-cursor {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 0 30px var(--color-black-opacity-ligth);
+  box-shadow: 0 0 30px var(--color-blue-opacity-ligth);
   padding: 20px 0 30px 0;
 }
 
@@ -1061,7 +1073,7 @@ span.typed-cursor {
 }
 
 .contact .php-email-form {
-  box-shadow: 0 0 30px var(--color-black-opacity-ligth);
+  box-shadow: 0 0 30px var(--color-blue-opacity-ligth);
   padding: 27px;
 }
 

@@ -11,6 +11,14 @@ set /a new_id=%old_id%+1
 set "to_remove=___%old_id%"
 set "to_add=___%new_id%"
 
+
+set "filename=style___%old_id%.css"
+set "new_filename=!filename:%to_remove%=%to_add%!"
+if not "%filename%"=="%new_filename%" (
+    ren "%filename%" "%new_filename%"
+)
+
+
 cd project\
 for /r %%f in (*) do (
     set "filename=%%~nxf"

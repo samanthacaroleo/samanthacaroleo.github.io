@@ -55,6 +55,7 @@ for /D %%p in (%to_delete%\*) do rmdir /S /Q "%%p"
 copy "404.html" "docs\404.html"
 copy "index.html" "docs\index.html"
 copy "project.html" "docs\project.html"
+copy "google7c2276a6705188b8.html" "docs\google7c2276a6705188b8.html"
 xcopy "assets" "docs/assets" /E /H /C /I
 
 CMD /C git fetch

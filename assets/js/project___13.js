@@ -28,7 +28,7 @@ async function loadImgProject() {
         if (!response.ok) throw new Error('Immagine non trovata');
         const html = `
           <div class="col-lg-12 portfolio-item">
-            <img src="${url}" class="img-fluid" alt="">
+            <img src="${url}" class="img-fluid" alt="${url} img ${id}">
           </div>`;
         container.innerHTML += html;
         id++;

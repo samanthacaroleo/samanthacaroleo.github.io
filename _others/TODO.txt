@@ -1,9 +1,4 @@
 scroll to contact
-immagini services
-
-seo (alt ecc)
-    alt vuoti
-    
 
 https://github.com/orgs/community/discussions/42375#discussioncomment-5296219
 https://www.dostips.com/DtTipsStringManipulation.php#Snippets.Remove
@@ -12,5 +7,5 @@ https://www.seozoom.it/meta-tag-google-seo/
 https://codepen.io/soulwire/pen/DdGRYG
 https://aulab.it/notizia/438/web-developer-freelance-7-portfolio-per-ispirarti
 https://codepen.io/lynnandtonic/pen/LYGjqOo
-
-title tag sotto i 60 caratteri e le meta description sotto i 160 caratter
+https://www.semrush.com/siteaudit/
+https://ogp.me/

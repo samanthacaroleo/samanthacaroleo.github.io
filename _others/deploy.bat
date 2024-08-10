@@ -56,7 +56,7 @@ copy "404.html" "docs\404.html"
 copy "index.html" "docs\index.html"
 copy "project.html" "docs\project.html"
 copy "google7c2276a6705188b8.html" "docs\google7c2276a6705188b8.html"
-copy "sitemap.xml" "docs\sitemap.xlm"
+copy "sitemap.xml" "docs\sitemap.xml"
 xcopy "assets" "docs/assets" /E /H /C /I
 
 CMD /C git fetch

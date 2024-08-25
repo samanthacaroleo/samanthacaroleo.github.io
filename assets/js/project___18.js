@@ -46,9 +46,9 @@ async function loadDropDown() {
   
   while (continua && containerDropDown) {
     try {
-      const projectName = JSON.parse(sessionStorage.getItem(`config_${id.toString()}`)).name;
-      if (!projectName) throw new Error('config non trovata');
-      const htmlDropDown = `<li><a class="dropdown-item ${id.toString() == projectId ? 'active' : ''}" href="project.html" onclick="saveIdProject(${id.toString()})">${projectName}</a></li>`
+      const projectConfig = JSON.parse(sessionStorage.getItem(`config_${id.toString()}`));
+      if (!projectConfig || !projectConfig.name || !(projectConfig.name.length > 0)) throw new Error('config non trovata');
+      const htmlDropDown = `<li><a class="dropdown-item ${id.toString() == projectId ? 'active' : ''}" href="${projectConfig.redirectUrl}" onclick="saveIdProject(${id.toString()})">${projectConfig.name}</a></li>`
       containerDropDown.innerHTML += htmlDropDown;
       id++;
     } catch (error) {

@@ -84,7 +84,7 @@ async function loadData() {
 
       const htmlPortfolio = `
         <div class="col-lg-4 col-md-6 portfolio-item filter-${projectConfig.category.toLowerCase().replace(' ', '_')}">
-          <a href="project.html" onclick="saveIdProject(${id.toString()})" style="position: relative">
+          <a href="${projectConfig.redirectUrl}" onclick="saveIdProject(${id.toString()})" style="position: relative">
             <div class="portfolio-img"><img src="${img_url}" class="img-fluid" alt="${projectConfig.name} img ${id}"></div>
             <div class="overlay">
               <h4 class="overlay-text">${projectConfig.name}</h4>
@@ -93,7 +93,7 @@ async function loadData() {
         </div>`;
       containerPortfolio.innerHTML += htmlPortfolio;
 
-      const htmlDropDown = `<li><a class="dropdown-item" href="project.html" onclick="saveIdProject(${id.toString()})">${projectConfig.name}</a></li>`
+      const htmlDropDown = `<li><a class="dropdown-item" href="${projectConfig.redirectUrl}" onclick="saveIdProject(${id.toString()})">${projectConfig.name}</a></li>`
       containerDropDown.innerHTML += htmlDropDown;
 
       id++;

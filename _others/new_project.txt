@@ -1,0 +1,59 @@
+procedura per caricare un nuovo progetto:
+
+1- SALVATAGGIO FILE
+	1.1- creare una copertina 540x540
+	1.2- salvare tutte le immagini del progetto adobe in formato .jpg (nome file step 4).
+		le immagini del progetto possono avere dimensioni diverse.
+		il vincolo è solo per la copertina.
+
+2- CREAZIONE PROGETTO
+
+	2.1- CARICAMENTO FILE
+	2.1.1- aprire la diretory del progetto
+		C:\Users\saman\Desktop\portfolio-samantha-caroleo\assets\project
+		in questa directory ci sono tutti i progetti caricati.
+	2.1.2- creare una nuova cartella per il progetto da caricare.
+		es. se l'ultima cartella del progetto è project_8,
+		creare nuova cartella project_9
+	2.1.3- (vedere in una cartella già esistente per conferma)
+		nome file copertina: prj2_portfolio___21.jpg
+		nome immagine 1 progetto: prj2_img0___21.jpg
+		nome immagine 2 progetto: prj2_img1___21.jpg
+		nome immagine 3 progetto: prj2_img2___21.jpg
+		...
+
+	2.2- CREAZIONE CATEGORIA
+		2.2.1- tutte le categorie di un progetto sono nella directory:
+			C:\Users\saman\Desktop\portfolio-samantha-caroleo\assets\project
+			aprire il file con editor testuale generic___xx.json
+			qui sarà possibile creare nuove categorie o prendere il nome della
+			categoria del nuovo progetto.
+			categorie attuali: "Branding", "Digital portraits", "Promotional Materials".
+		2.2.2- aprire la cartella del nuovo progetto:
+			C:\Users\saman\Desktop\portfolio-samantha-caroleo\assets\project\project_9
+			creare nuovo file per la categoria: prj8_config___21.json.
+		2.2.3- il contenuto di questo file è cosi formato:
+			{
+				"name": "inserisci qui il nome del progetto",
+				"category" : "inserisci qui la categoria del progetto",
+				"redirectUrl": "da non toccare"
+			}
+			i risultato finale d questo file si puo controllare con i progetti già caricati, esempio:
+			{
+				"name": "VERDEVIVO",
+				"category" : "Branding",
+				"redirectUrl": "project.html"
+			}
+
+3- CHECK FINALE: controlalre da un vecchio progetto se tutti i nomi o le cartelle hanno il nome corretto.
+				 solo se hanno il nome corretto e non ci sono errori procedere allo step 4.
+
+4- MESSA ONLINE: clicckare su manda online / deploy.
+
+APPENDICE A
+tutti i file alla fine del nome hanno un ___xx. dove xx è un numero di versionamento per la cache 
+del sito e delle immagini. quando si creano nuovi file per creare un nuovo progetto il numero 
+non deve essere incrementato ne modificato. tutti i file che avranno un numero finale differenti dalla versione 
+in corso visibile al percoso: C:\Users\saman\Desktop\portfolio-samantha-caroleo\assets\incId.txt
+saranno esclusi dalla visualizzazione online.
+questi numeri sono autogestiti. da non modificare mai manualmente.
